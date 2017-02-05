@@ -1,0 +1,54 @@
+Week 1 Quiz
+
+Due date for this assignment: 2017-02-03, 23:59 IST.
+
+1. What does f(1782818) return, for the following function definition:
+
+def f(x):
+  d=0
+  while x > 1:
+    (d,x) = (d+1,x/10)
+  return(d)
+
+
+7
+
+2. What is the value of h(5,4) for the function below?
+
+def h(m,n):
+  ans = 1
+  while (n > 0):
+    (ans,n) = (ans*m,n-1) 
+  return(ans)
+
+
+625
+
+3. What can we say about a number n if g(n) returns True for the function g given below?
+
+def g(n):
+  for i in range(2,n):
+    if n%i == 0:
+       return(False)
+
+  return(True)
+
+ n is a prime number.
+
+What would happen if we call gcd(m,n) with m positive and n negative in the following definition? 
+
+4. def gcd(m,n):
+
+    if m < n: 
+        (m,n) = (n,m)
+
+    if (m % n) == 0:
+        return(n)
+    else:
+        diff = m-n
+        return (gcd(max(n,diff),min(n,diff)))
+
+
+ The behaviour depends on the exact values of m and n.
+
+
