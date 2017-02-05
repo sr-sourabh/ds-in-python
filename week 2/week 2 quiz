@@ -1,0 +1,65 @@
+Week 2 Quiz
+
+Due date for this assignment: 2017-02-06, 23:59 IST.
+
+
+1. One of the following 10 statements generates an error.  Which one?  (Your answer should be a number between 1 and 10.)
+
+x = [1,"abcd",2,"efgh",[3,4]]  # Statement 1
+y = x[0:50]                    # Statement 2
+z = y                          # Statement 3
+w = x                          # Statement 4
+x[1] = x[1] + 'd'              # Statement 5
+x[1][1] = 'y'                  # Statement 6
+y[2] = 4                       # Statement 7
+z[0] = 0                       # Statement 8
+w[4][0] = 1000                 # Statement 9
+a = (x[4][1] == 4)             # Statement 10
+
+
+6
+
+
+
+2. Consider the following lines of Python code.
+
+  x = [13,4,17,1000]
+  w = x[1:]
+  u = x[1:]
+  y = x
+  u[0] = 50
+  y[1] = 40
+
+    Which of the following is correct?
+
+
+
+ x[1] == 40, y[1] == 40, w[0] == 4, u[0] == 50
+ 
+ 
+3. What is the value of  endmsg after executing the following lines?
+
+startmsg = "hello"
+endmsg = ""
+for i in range(0,len(startmsg)):
+  endmsg = startmsg[i] + endmsg
+
+
+
+olleh
+
+
+
+4. What is the value of mylist after the following lines are executed?
+
+def mystery(l):
+   l = l + l
+  return()
+
+mylist = [31,24,75]
+mystery(mylist)
+
+
+[31,24,75]
+
+
