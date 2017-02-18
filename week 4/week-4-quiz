@@ -1,0 +1,56 @@
+Week 4 Quiz
+Due date for this assignment: 2017-02-20, 23:59 IST.
+
+
+1.	Consider the following Python function.
+
+	def mystery(l):
+	   if l == []:
+	      return (l)
+	   else:
+	      return (l[-1:] + mystery(l[:-1]))
+
+	What does mystery([3,2,7,8,5]) return?
+	
+[5, 8, 7, 2, 3]
+
+
+
+2. 	What is the value of pairs after the following assignment?
+	pairs = [ (x,y) for x in range(4) for y in range(3) if (x+y)%2 != 0 ]
+	
+[(0, 1), (1, 0), (1, 2), (2, 1), (3, 0), (3, 2)]
+
+
+
+
+3.	Consider the following dictionary.
+
+	     marks = {"Quizzes":{"Mahesh":[3,5,7,8],"Suresh":[9,4,8,8],"Uma":[9,9,7,6]},"Exams":{"Mahesh":[37],"Uma":[36]}}
+
+	Which of the following statements does not generate an error?
+
+	marks["Exams"]["Suresh"].extend([44])
+	marks["Exams"]["Suresh"].append(44)
+	marks["Exams"]["Suresh"] = [44]
+	marks["Exams"]["Suresh"][0:] = [44]
+	
+ marks["Exams"]["Suresh"] = [44]
+
+
+
+
+4.	Assume that d has been initialized as an empty dictionary:
+
+	     d = {}
+
+	Which of the following generates an error?
+	d[[1,2]] = 5
+	d[(1,2)] = 5
+	d["1,2"] = 5
+	d[12] = 5
+	
+ d[[1,2]] = 5
+ 
+ 
+ 
