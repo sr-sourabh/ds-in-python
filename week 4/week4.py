@@ -117,7 +117,7 @@ def addpoly(a,b):
 		
 				
 	c.sort(key = lambda l : l[1] , reverse = True)
-	print (c)
+	return (c)
 	
 
 		
