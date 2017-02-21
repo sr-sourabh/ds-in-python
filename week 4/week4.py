@@ -102,22 +102,55 @@ def orangecap(d):
 #addpoly([(4,3),(3,0)],[(-4,3),(2,1)]) = [(2, 1),(3, 0)]
 
 def addpoly(a,b):
-	c=[]
+	c=a+b
+	f={}
+	d=[]
+	for i in range(len(c)):
+		f[c[i][1]] = 0 
+	
+	for i in range(len(c)):
+		total = c[i][0]
+		for j in range(i+1,len(c)):
+			if c[i][1] == c[j][1] :
+				total += c[j][0]
+		if not f[c[i][1]] :
+			d.append(( total,c[i][1] ))
+			f[c[i][1]] = 1
+			
+	#print (d)
+	
+	for ed in d:		
+		for ed in d:
+			if ed[0]==0:
+				d.remove(ed)
+	d.sort(key = lambda l : l[1] , reverse = True)
+	#print (d)
+	return (d)
+	
+	
+	
+	
+def multpoly(a,b):
+	cc=[]
+	d=[]
+	
 	for ea in a:
 		for eb in b:
-			if ea[1] == eb[1]:
-				if ea[0] + eb[0] != 0:
-					c.append((ea[0]+eb[0] , ea[1]))
-				b.remove(eb)
-				break;
-			elif ea not in c :
-				c.append(ea)
-				c.append(eb)
+			cc.append((ea[0]*eb[0] , ea[1] + eb[1]))
+			
+	#print (cc)
+	d = addpoly(cc[:1] , cc[1:])
+	return (d)
 	
-		
-				
-	c.sort(key = lambda l : l[1] , reverse = True)
-	return (c)
+			
+	
+
+
+
+
+
+
+
 	
 
 		
