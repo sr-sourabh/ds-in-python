@@ -1,3 +1,6 @@
+import operator
+import sys
+
 '''
 
 This assignment contains only one problem, and requires you to write a standalone Python program that can be directly executed, not just a 
@@ -71,8 +74,7 @@ and no two players have the same name.
 
 
 
-import operator
-import sys
+
 
 '''
 1. Number of best-of-5 set matches won
@@ -143,7 +145,7 @@ def process():
 	    	    else:
 	    	    	looser = name			#identify looser from count ==2
 	    	    name=''
-	  	if count == 2:
+	    	if count == 2:
 	    		compute(a[i+1 :],names,winner,looser)		#compute the requirements of the players
 	    		break
 			 
